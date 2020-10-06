@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 
 function App() {
+    const buttonStyle = {
+        "font-size": "30px"
+    }
     return (
         <div className="App">
             <header className="App-header">
-                <button style={{"font-size": "30px"}}>Click Me</button>
+                <button style={buttonStyle}>Click Me</button>
             </header>
         </div>
     );
