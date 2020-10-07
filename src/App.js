@@ -14,10 +14,14 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <button style={buttonStyle}>Click Me</button>
+                <Button style={buttonStyle}>Click Me</Button>
             </header>
         </div>
     );
+}
+
+function Button(props) {
+    return <button style={props.style}>{props.children}</button>
 }
 
 export default App;
