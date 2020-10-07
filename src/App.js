@@ -13,17 +13,18 @@ function App() {
     );
 }
 
+const defaultButtonStyle = {
+    fontSize: 20,
+    color: "white",
+    backgroundColor: "green",
+    border: "none",
+    borderRadius: 5,
+    padding: 10,
+    outline: "none",
+    margin: 5
+};
+
 function Button(props) {
-    const defaultButtonStyle = {
-        fontSize: 20,
-        color: "white",
-        backgroundColor: "green",
-        border: "none",
-        borderRadius: 5,
-        padding: 10,
-        outline: "none",
-        margin: 5
-    };
     const buttonStyle= {...defaultButtonStyle, ...props.style};
     return <button style={buttonStyle}>{props.children}</button>
 }
