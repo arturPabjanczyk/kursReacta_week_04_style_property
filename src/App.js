@@ -13,25 +13,14 @@ function App() {
     );
 }
 
-const defaultButtonStyle = {
-    fontSize: 20,
-    color: "white",
-    backgroundColor: "green",
-    border: "none",
-    borderRadius: 5,
-    padding: 10,
-    outline: "none",
-    margin: 5
-};
-
 function Button(props) {
-    const buttonStyle= {...defaultButtonStyle};
+    const buttonStyle= {};
     if (props.type === "primary") {
         buttonStyle.backgroundColor = "blue"
     } else if (props.type === "danger") {
         buttonStyle.backgroundColor = "red"
     }
-    return <button style={buttonStyle}>{props.children}</button>
+    return <button className="Button" style={buttonStyle}>{props.children}</button>
 }
 
 export default App;
