@@ -3,11 +3,14 @@ import './App.css';
 
 function App() {
     const buttonStyle = {
-        "font-size": "30px"
-    }
-    // buttonStyle["font-size"] = "20px";
-    // buttonStyle.fontSize = "20px";
-    buttonStyle.fontSize = 20;
+        fontSize: 20,
+        color: "white",
+        backgroundColor: "red",
+        border: "none",
+        borderRadius: 5,
+        padding: 10,
+        outline: "none"
+    };
     return (
         <div className="App">
             <header className="App-header">
