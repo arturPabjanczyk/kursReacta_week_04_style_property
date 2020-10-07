@@ -2,15 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-    const buttonStyle = {
-        fontSize: 20,
-        color: "white",
-        backgroundColor: "red",
-        border: "none",
-        borderRadius: 5,
-        padding: 10,
-        outline: "none"
-    };
+    const buttonStyle = {backgroundColor: "red"};
     return (
         <div className="App">
             <header className="App-header">
@@ -21,7 +13,17 @@ function App() {
 }
 
 function Button(props) {
-    return <button style={props.style}>{props.children}</button>
+    const defaultButtonStyle = {
+        fontSize: 20,
+        color: "white",
+        backgroundColor: "green",
+        border: "none",
+        borderRadius: 5,
+        padding: 10,
+        outline: "none"
+    };
+    const buttonStyle= {...defaultButtonStyle, ...props.style};
+    return <button style={buttonStyle}>{props.children}</button>
 }
 
 export default App;
