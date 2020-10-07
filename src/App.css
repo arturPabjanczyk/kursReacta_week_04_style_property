@@ -2,11 +2,12 @@
     --normal-background: green;
     --hover-background: darkgreen;
     --active-background: lightgreen;
+    --border-radius: 5px;
     font-size: 20px;
     color: white;
     background-color: var(--normal-background);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 10px;
     outline: none;
     margin: 5px;

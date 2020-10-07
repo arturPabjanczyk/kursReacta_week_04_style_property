@@ -24,6 +24,7 @@ function Button(props) {
         buttonStyle["--hover-background"] = "darkred"
         buttonStyle["--active-background"] = "pink"
     }
+    buttonStyle["--border-radius"] = "10px";
     return <button className="Button" style={buttonStyle}>{props.children}</button>
 }
 
