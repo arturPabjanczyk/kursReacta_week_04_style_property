@@ -5,8 +5,8 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Button style={{backgroundColor: "red"}}>Click Me</Button>
-                <Button style={{backgroundColor: "blue"}}>Click Me</Button>
+                <Button type="danger">Click Me</Button>
+                <Button type="primary">Click Me</Button>
                 <Button >Click Me</Button>
             </header>
         </div>
@@ -25,7 +25,12 @@ const defaultButtonStyle = {
 };
 
 function Button(props) {
-    const buttonStyle= {...defaultButtonStyle, ...props.style};
+    const buttonStyle= {...defaultButtonStyle};
+    if (props.type === "primary") {
+        buttonStyle.backgroundColor = "blue"
+    } else if (props.type === "danger") {
+        buttonStyle.backgroundColor = "red"
+    }
     return <button style={buttonStyle}>{props.children}</button>
 }
 
