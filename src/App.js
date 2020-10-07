@@ -5,26 +5,32 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Button style={{backgroundColor: "red"}}>Click Me</Button>
-                <Button style={{backgroundColor: "blue"}}>Click Me</Button>
+                <Button type="danger">Click Me</Button>
+                <Button type="primary">Click Me</Button>
                 <Button >Click Me</Button>
             </header>
         </div>
     );
 }
 
+const defaultButtonStyle = {
+    fontSize: 20,
+    color: "white",
+    backgroundColor: "green",
+    border: "none",
+    borderRadius: 5,
+    padding: 10,
+    outline: "none",
+    margin: 5
+};
+
 function Button(props) {
-    const defaultButtonStyle = {
-        fontSize: 20,
-        color: "white",
-        backgroundColor: "green",
-        border: "none",
-        borderRadius: 5,
-        padding: 10,
-        outline: "none",
-        margin: 5
-    };
-    const buttonStyle= {...defaultButtonStyle, ...props.style};
+    const buttonStyle= {...defaultButtonStyle};
+    if (props.type === "primary") {
+        buttonStyle.backgroundColor = "blue"
+    } else if (props.type === "danger") {
+        buttonStyle.backgroundColor = "red"
+    }
     return <button style={buttonStyle}>{props.children}</button>
 }
 
