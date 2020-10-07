@@ -16,9 +16,9 @@ function App() {
 function Button(props) {
     const buttonStyle= {};
     if (props.type === "primary") {
-        buttonStyle.backgroundColor = "blue"
+        buttonStyle["--normal-background"] = "blue"
     } else if (props.type === "danger") {
-        buttonStyle.backgroundColor = "red"
+        buttonStyle["--normal-background"] = "red"
     }
     return <button className="Button" style={buttonStyle}>{props.children}</button>
 }
