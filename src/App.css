@@ -9,6 +9,14 @@
     margin: 5px;
 }
 
+.Button:hover {
+    background-color: darkgreen;
+}
+
+.Button:active {
+    background-color: lightgreen;
+}
+
 .App {
   text-align: center;
 }
