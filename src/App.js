@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from "styled-components";
 import './App.css';
 
 function App() {
@@ -7,14 +8,38 @@ function App() {
             <header className="App-header">
                 <Button type="danger">Click Me</Button>
                 <Button type="primary">Click Me</Button>
-                <Button >Click Me</Button>
+                <Button>Click Me</Button>
+                <StyledButton>Click Me Too!</StyledButton>
             </header>
         </div>
     );
 }
 
+const StyledButton = styled.button`
+    --normal-background: green;
+    --hover-background: darkgreen;
+    --active-background: lightgreen;
+    --border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--normal-background);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    outline: none;
+    margin: 5px;
+    
+    &:hover {
+        background-color: var(--hover-background);
+    }
+
+    &:active {
+        background-color: var(--active-background);
+    }
+`;
+
 function Button(props) {
-    const buttonStyle= {};
+    const buttonStyle = {};
     if (props.type === "primary") {
         buttonStyle["--normal-background"] = "blue"
         buttonStyle["--hover-background"] = "darkblue"
