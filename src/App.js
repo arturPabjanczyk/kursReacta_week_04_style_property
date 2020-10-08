@@ -50,7 +50,7 @@ function Button(props) {
         buttonStyle["--active-background"] = "pink"
     }
     buttonStyle["--border-radius"] = "10px";
-    return <button className="Button" style={buttonStyle}>{props.children}</button>
+    return <StyledButton style={buttonStyle}>{props.children}</StyledButton>
 }
 
 export default App;
