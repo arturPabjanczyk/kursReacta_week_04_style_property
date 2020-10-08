@@ -10,6 +10,7 @@ function App() {
                 <Button type="primary">Click Me</Button>
                 <Button>Click Me</Button>
                 <StyledButton>Click Me Too!</StyledButton>
+                <DangerButton>Warning!</DangerButton>
             </header>
         </div>
     );
@@ -36,6 +37,12 @@ const StyledButton = styled.button`
     &:active {
         background-color: var(--active-background);
     }
+`;
+
+const DangerButton = styled(StyledButton)`
+    --normal-background: red;
+    --hover-background: darkRed;
+    --active-background: pink;
 `;
 
 function Button(props) {
