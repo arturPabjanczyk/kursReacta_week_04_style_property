@@ -20,12 +20,11 @@ const StyledButton = styled.button`
     --normal-background: green;
     --hover-background: darkgreen;
     --active-background: lightgreen;
-    --border-radius: 5px;
     font-size: 20px;
     color: white;
     background-color: var(--normal-background);
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: ${props => props.borderRadius || 5}px;
     padding: 10px;
     outline: none;
     margin: 5px;
@@ -57,7 +56,7 @@ function Button(props) {
         buttonStyle["--active-background"] = "pink"
     }
     buttonStyle["--border-radius"] = "10px";
-    return <StyledButton style={buttonStyle}>{props.children}</StyledButton>
+    return <StyledButton borderRadius={15} style={buttonStyle}>{props.children}</StyledButton>
 }
 
 export default App;
